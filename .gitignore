@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# builds
+dist/
+build/
+server/dist/
+client/dist/
+
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# coverage
+coverage/
+**/coverage/
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# uploads (runtime)
+server/uploads/
+server/tmp/
+
+# misc
+.cache/
+*.tsbuildinfo

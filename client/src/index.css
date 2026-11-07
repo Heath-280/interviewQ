@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 4%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 243 75% 96%;
+    --accent-foreground: 243 75% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 20% 98%;
+
+    --success: 142 71% 40%;
+    --success-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 47% 8%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 47% 8%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 243 75% 65%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+
+    --accent: 243 47% 20%;
+    --accent-foreground: 243 75% 85%;
+
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 210 20% 98%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 243 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Larger, comfortable hit targets on touch devices */
+  @media (max-width: 640px) {
+    input,
+    textarea,
+    select,
+    button {
+      font-size: 16px;
+    }
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background-image:
+      radial-gradient(60rem 60rem at 0% 0%, hsl(243 75% 59% / 0.12), transparent 55%),
+      radial-gradient(50rem 50rem at 100% 0%, hsl(280 70% 60% / 0.1), transparent 50%);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 9999px;
+  }
+}

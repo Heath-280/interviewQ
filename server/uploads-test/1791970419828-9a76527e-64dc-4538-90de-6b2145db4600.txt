@@ -1,0 +1,7 @@
+
+Jordan Rivera
+Senior Full Stack Engineer
+
+Experience building web applications with React, TypeScript, Node.js and Express.
+Worked with MongoDB and PostgreSQL. Deployed services on AWS using Docker and Kubernetes.
+Strong communication and leadership skills, comfortable with Agile and Scrum teams.
